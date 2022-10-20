@@ -1,0 +1,4 @@
+[1020/143248.049:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
+[1020/143248.153:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
+[1020/143502.174:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
+[1020/144036.774:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
