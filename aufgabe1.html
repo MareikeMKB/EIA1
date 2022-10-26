@@ -4,19 +4,69 @@
         <title> Portfolio </title>
     </head>
     <body>
-    </br>
+    <style>
+        h1
+        {
+            color:rgb(0, 94, 255);
+            font-family:"Georgia";
+            text-align: center;
+            text-decoration: underline;
+        }
+        body
+        {
+            background-color:rgba(0, 208, 255, 0.26);
+        }
+        #foto1, #foto3
+        {
+            margin-left: 100px;
+        }
+        #foto2, #foto4
+        {
+            float: right;
+            margin-right: 100px;
+        }
+        #video3, #video4
+        {
+            float: right;
+            margin-right:50px;
+        }
+        #video1, #video2
+        {
+            margin-left:50px;
+        }
+    </style>
     <h1> Portfolio </h1>
-        <img src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/foto/foto1.jpg?raw=true" /> 
-        <img src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/foto/foto2.jpg?raw=true" />
-        <img src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/foto/foto3.jpg?raw=true" />
-        <img src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/foto/foto4.jpg?raw=true" />
-        <video width="800" height="100" controls>
-            <source src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/animation/clip1.mp4?raw=true" type="video/mp4" />
-        </video>
-        <video width="800" height="100" controls>
-            <source src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/animation/clip2.mp4?raw=true" type="video/mp4" />
-        </video>
-        <video width="800" height="100" controls>
-            <source src="https://github.com/gabriel-rausch/EIA1-Material/blob/master/L02/task_material/animation/clip3.mp4?raw=true" type="video/mp4" />
-        </video>
+        <div id="foto1">
+            <img src="../foto1.jpg" />
+        </div> 
+        <div id="foto2">
+            <img src="../foto2.jpg" />
+        </div>
+        <div id="foto3">
+            <img src="../foto3.jpg" />
+        </div>
+        <div id="foto4">
+            <img src="../foto4.jpg" />
+        </div>
+        <div id="video1">
+            <video width="800" height="100" controls>
+                <source src="/clip1.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div id="video2">
+            <video width="800" height="100" controls>
+                <source src="/clip2.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div id="video3">
+            <video width="800" height="100" controls>
+                <source src="/clip3.mp4" type="video/mp4"/>
+            </video>
+        </div>
+        <div id="video4">
+            <video width="800" height="100" controls>
+                <source src="/clip4.mp4" type="video/mp4"/>
+            </video>
+        </div>
+    </body>
 </html>
