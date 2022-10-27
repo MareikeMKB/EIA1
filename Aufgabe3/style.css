@@ -1,0 +1,39 @@
+h1 {
+    color: rgb(0, 122, 6);
+    text-align: center;
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Candara";
+    background-color: rgba(122, 221, 103, 0.26);
+}
+
+#foto1 {
+    margin-left: 200px;
+    margin-top: 300px;
+    display: inline;
+}
+
+#foto2 {
+    margin-right: 200px;
+    float: right;
+    display: inline;
+}
+
+#foto3 {
+    margin-left: 300px;
+    margin-top: 100px;
+    display: inline;
+}
+
+
+#foto4 {
+    float: right;
+    margin-right: 300px;
+    display: inline;
+}
+
+#Impressum {
+    color:aquamarine;
+}
