@@ -1,0 +1,38 @@
+h1 {
+    color: rgb(0, 122, 6);
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+body {
+    font-family: "Candara";
+    background-color: rgba(122, 221, 103, 0.26);
+    background-image: url("./IMG_2806.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+}
+
+
+nav {
+    text-align:right;
+    width: 100%;
+}
+
+header{
+    height: 500px
+}
+
+#foto1, #foto2, #foto3, #foto4{
+    margin: 10px auto 10px auto;
+}
+
+.Elemente {
+    width: 800px;
+    margin: 10px auto 0px auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
