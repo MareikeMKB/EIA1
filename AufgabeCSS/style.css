@@ -55,7 +55,7 @@ footer {
     background-color: #eaeaea;
     width: 100%;
     left: 0;
-    bottom: 0;
+    margin-top: 50px;
 }
 
 #footermain {
@@ -66,23 +66,29 @@ footer {
     margin: 0 auto;
 }
 
-#Kontakt {
+#kontakt {
     color: rgb(96, 95, 95);
+    display:inline-block;
     margin-left: 7%;
+    margin-right: 10%;
 }
 
-#SocialMedia {
+#socialMedia {
     color: rgb(96, 95, 95);
     text-align: center;
+    display: inline-block;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
-#Copyright {
+#copyright {
     color: rgb(96, 95, 95);
-    float: right;
+    display: inline-block;
+    margin-left: 10%;
     margin-right: 7%;
 }
 
-.Schrift {
+.schrift {
     text-align: center;
 }
 
