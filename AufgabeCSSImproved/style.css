@@ -1,0 +1,135 @@
+h1 {
+    color: rgb(255, 238, 0);
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+h2 {
+    color: darkgreen;
+    margin-bottom: 40px;
+}
+
+body {
+    font-family: "Candara";
+    background-color: rgba(122, 221, 103, 0.26);
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    height: 100%;
+    width: 100%;
+    animation-name: header;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header{
+    0%{
+        background-image: url("./IMG_2806.jpg");
+    }
+    50%{
+        background-image: url("./IMG_4129.jpeg");
+    }
+    100%{
+        background-image: url("./IMG_2806.jpg");
+    }
+ }
+
+#hangingtree {
+    margin-left: 50px;
+}
+
+nav {
+    float:right;
+    padding: 20px;
+}
+
+header{
+    height: 500px;
+}
+
+#foto1, #foto2, #foto3, #foto4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+footer {
+    background-size: 100% auto;
+    position:absolute;
+    background-color: #eaeaea;
+    width: 100%;
+    left: 0;
+    margin-top: 50px;
+}
+
+#footermain {
+    background-size: 100% auto;
+    position:absolute;
+    background-color: #eaeaea;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#kontakt {
+    color: rgb(96, 95, 95);
+    display:inline-block;
+    margin-left: 7%;
+    margin-right: 10%;
+}
+
+#socialMedia {
+    color: rgb(96, 95, 95);
+    text-align: center;
+    display: inline-block;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#copyright {
+    color: rgb(96, 95, 95);
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 7%;
+}
+
+.schrift {
+    text-align: center;
+}
+
+input{
+    color:white;
+    background-color:gray;
+}
+
+#input {
+    margin-left: 10%;
+}
+
+
+.zoom {
+    transition: transform .2s;
+    margin:0 auto;
+    overflow: hidden;
+}
+.zoom:hover {
+    transform: scale(1.1); 
+}
+
+#black {
+    opacity: 0.5;
+}
+
+#black:hover {
+    opacity: 1;
+}
+

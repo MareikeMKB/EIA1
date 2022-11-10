@@ -100,3 +100,14 @@ input{
 #input {
     margin-left: 10%;
 }
+
+
+.zoom {
+    transition: transform .2s;
+    margin:0 auto;
+    overflow: hidden;
+    transform: scale(0.9);
+}
+.zoom:hover {
+    transform: scale(1.3); 
+}
