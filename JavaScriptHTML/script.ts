@@ -24,13 +24,35 @@ const prozentsp = (einwohners - einwohnersp) * 100 /einwohnersp;
 const einwohnersd = einwohners - einwohnersp;
 
 
-function setNumbers(land){
-    
+function Ausgabe (value1, value2, value3, value4, value5) {
+    document.querySelector("h1").innerHTML= "Einwohnerzahl in" +value1;
+    document.querySelector('#total').innerHTML=value2;
+    document.querySelector("#EU").innerHTML=value3+ '%';
+    document.querySelector("#growth").innerHTML=value4 + '%';
+    document.querySelector('#growthp').innerHTML = value5+ '';
 }
 
-/* Funktion mit Daten (Land) und mit Variablen Funktion für Ausgabe machen, die je nach angeklicktem Land (eingegebene Daten) die Ausgabe anpasst, dass man nicht 5000 Funktionen hat, die das exakt selbe machen - oder mit EventListener
-Anonyme Funktion (function ()) über Event-Listener und erst drinnen tatsächliche Funktion aufrufen*/
+document.querySelector('.germany').addEventListener('click', function() {
+    Ausgabe("Deutschland", einwohnerd, prozentd, prozentdp, einwohnerdd);
+})
 
+document.querySelector('.france').addEventListener('click', function() {
+    Ausgabe("Frankreich", einwohnerf, prozentf, prozentfp, einwohnerfd);
+})
+
+document.querySelector('.italy').addEventListener('click', function() {
+    Ausgabe("Italien", einwohneri, prozenti, prozentip, einwohnerid);
+})
+
+document.querySelector('.sweden').addEventListener('click', function() {
+    Ausgabe("Schweden", einwohners, prozents, prozentsp, einwohnersd);
+})
+
+
+
+
+/* Warum auch immer hat es nicht so funktioniert, wie es soll, ich verstehe es nicht, aber die Zeit ist ziemolich um, 
+Deswegen habe ich schon Mal abgegeben und werde es bis Mittwoch noch Mal probieren*/
 /* console.log ('FRANKREICH')
 console.log('Frankreich hat im Jahr 2022 ' + einwohnerf + ' Einwohner.');
 console.log('Das sind ' + prozentf + '% der Einwohner der EU.');

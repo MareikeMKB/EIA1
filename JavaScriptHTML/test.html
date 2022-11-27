@@ -14,7 +14,7 @@
     <nav>
         <div class="row">
             <div class="wrapper">
-                <img src="images_copy/germany.png" height="76px" class="germany">
+                <img src="images_copy/germany.png" height="76px" class="germany" defer>
                 <h5>Deutschland</h5>
             </div>
             <div class="wrapper">
@@ -56,7 +56,7 @@
                 <h5>Finnland</h5>
             </div>
             <div class="wrapper active">
-                <img src="images_copy/france.png" height="76px" class="france">
+                <img src="images_copy/france.png" height="76px" class="france" defer>
                 <h5>Frankreich</h5>
             </div>
             <div class="wrapper">
@@ -72,7 +72,7 @@
                 <h5>Irland</h5>
             </div>
             <div class="wrapper">
-                <img src="images_copy/italy.png" height="76px" class="italy">
+                <img src="images_copy/italy.png" height="76px" class="italy" defer>
                 <h5>Italien</h5>
             </div>
             <div class="wrapper">
@@ -122,35 +122,41 @@
                 <h5>Spanien</h5>
             </div>
             <div class="wrapper">
-                <img src="images_copy/sweden.png" height="76px" class="sweden">
+                <img src="images_copy/sweden.png" height="76px" class="sweden" defer>
                 <h5>Schweden</h5>
             </div>
         </div>
     </nav>
 
-    <img src="images_copy/eu_stars.png" class="stars">
-    <h1>
-        Einwohnerzahl in der europäischen Union
-    </h1>
-
     <main>
+        <div class="chartStarWrapper">
+            <img src="images_copy/eu_stars.png" class="stars">
+            
+            <div class="chartWrapper">
+                <div class="chart"></div>
+            </div>
+
+        </div>
+        <h1>
+            Einwohnerzahl in der europäischen Union
+        </h1>
         <section>
-            <h2>65,48Mio</h2>
+            <h2 id="total" defer>65,48Mio</h2>
             <p>Gesamtzahl Einwohnerinnen und Einwohner in Frankreich in 2022</p>
         </section>
 
         <section>
-            <h2>14%</h2>
+            <h2 id="EU" defer>14%</h2>
             <p>Relativ zur Gesamtzahl in der EU</p>
         </section>
 
         <section>
-            <h2>5,1%</h2>
+            <h2 id="growth" defer>5,1%</h2>
             <p>Wachstumsrate seit 2008</p>
         </section>
 
         <section>
-            <h2>3,34Mio</h2>
+            <h2 id="growthp" defer>3,34Mio</h2>
             <p>Wachstumsrate gesamt zwischen 2008 and 2022</p>
         </section>
     </main>
