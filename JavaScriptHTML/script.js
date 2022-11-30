@@ -1,5 +1,9 @@
-const einwohnerf = 65617812;
 const einwohnereu = 447010000;
+const einwohnereup = 501100000;
+const prozente = 100;
+const prozentep = (einwohnereu - einwohnereup) * 100 / einwohnereup;
+const einwohnereud = einwohnereu - einwohnereup;
+const einwohnerf = 65617812;
 const einwohnerfp = 62879530;
 const prozentf = einwohnerf * 100 / einwohnereu;
 const prozentfp = (einwohnerf - einwohnerfp) * 100 / einwohnerfp;
@@ -20,7 +24,8 @@ const prozents = einwohners * 100 / einwohnereu;
 const prozentsp = (einwohners - einwohnersp) * 100 / einwohnersp;
 const einwohnersd = einwohners - einwohnersp;
 function Ausgabe(value1, value2, value3, value4, value5) {
-    document.querySelector("h1").innerHTML = "Einwohnerzahl in" + value1;
+    document.querySelector("h1").innerHTML = "Einwohnerzahl in " + value1;
+    document.querySelector('#text').innerHTML = "Gesamtzahl Einwohnerinnen und Einwohner in " + value1 + " in 2022";
     document.querySelector('#total').innerHTML = value2;
     document.querySelector("#EU").innerHTML = value3 + '%';
     document.querySelector("#growth").innerHTML = value4 + '%';
@@ -37,6 +42,9 @@ document.querySelector('.italy').addEventListener('click', function () {
 });
 document.querySelector('.sweden').addEventListener('click', function () {
     Ausgabe("Schweden", einwohners, prozents, prozentsp, einwohnersd);
+});
+document.querySelector('.stars').addEventListener('click', function () {
+    Ausgabe("der Europäischen Union", einwohnereu, prozente, prozentep, einwohnereud);
 });
 /* Warum auch immer hat es nicht so funktioniert, wie es soll, ich verstehe es nicht, aber die Zeit ist ziemolich um,
 Deswegen habe ich schon Mal abgegeben und werde es bis Mittwoch noch Mal probieren*/
