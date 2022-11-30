@@ -48,7 +48,7 @@ function Ausgabe (value1, value2, value3, value4, value5, value6) {
     document.querySelector("#growth").innerHTML=value4 + '%';
     document.querySelector('#growthp').innerHTML = value5+ '';
 
-    document.querySelector('.chart').setAttribute("style", "height:" + value6 + "%;");
+    document.querySelector('.chart').setAttribute("style", "height:" + value6 + "%;")
 }
 
 document.querySelector('.germany').addEventListener('click', function() {

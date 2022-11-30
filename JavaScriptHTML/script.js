@@ -23,28 +23,37 @@ const einwohnersp = 9390168;
 const prozents = einwohners * 100 / einwohnereu;
 const prozentsp = (einwohners - einwohnersp) * 100 / einwohnersp;
 const einwohnersd = einwohners - einwohnersp;
-function Ausgabe(value1, value2, value3, value4, value5) {
+function percentEU(var1, var2) {
+    return ((var2 / var1) * 100);
+}
+let yellow1 = percentEU(einwohnereu, einwohnerd);
+let yellow2 = percentEU(einwohnereu, einwohnerf);
+let yellow3 = percentEU(einwohnereu, einwohneri);
+let yellow4 = percentEU(einwohnereu, einwohners);
+let yellow5 = percentEU(einwohnereu, einwohnereu);
+function Ausgabe(value1, value2, value3, value4, value5, value6) {
     document.querySelector("h1").innerHTML = "Einwohnerzahl in " + value1;
     document.querySelector('#text').innerHTML = "Gesamtzahl Einwohnerinnen und Einwohner in " + value1 + " in 2022";
     document.querySelector('#total').innerHTML = value2;
     document.querySelector("#EU").innerHTML = value3 + '%';
     document.querySelector("#growth").innerHTML = value4 + '%';
     document.querySelector('#growthp').innerHTML = value5 + '';
+    document.querySelector('.chart').setAttribute("style", "height:" + value6 + "%;");
 }
 document.querySelector('.germany').addEventListener('click', function () {
-    Ausgabe("Deutschland", einwohnerd, prozentd, prozentdp, einwohnerdd);
+    Ausgabe("Deutschland", einwohnerd, prozentd, prozentdp, einwohnerdd, yellow1);
 });
 document.querySelector('.france').addEventListener('click', function () {
-    Ausgabe("Frankreich", einwohnerf, prozentf, prozentfp, einwohnerfd);
+    Ausgabe("Frankreich", einwohnerf, prozentf, prozentfp, einwohnerfd, yellow2);
 });
 document.querySelector('.italy').addEventListener('click', function () {
-    Ausgabe("Italien", einwohneri, prozenti, prozentip, einwohnerid);
+    Ausgabe("Italien", einwohneri, prozenti, prozentip, einwohnerid, yellow3);
 });
 document.querySelector('.sweden').addEventListener('click', function () {
-    Ausgabe("Schweden", einwohners, prozents, prozentsp, einwohnersd);
+    Ausgabe("Schweden", einwohners, prozents, prozentsp, einwohnersd, yellow4);
 });
 document.querySelector('.stars').addEventListener('click', function () {
-    Ausgabe("der Europäischen Union", einwohnereu, prozente, prozentep, einwohnereud);
+    Ausgabe("der Europäischen Union", einwohnereu, prozente, prozentep, einwohnereud, yellow5);
 });
 /* Warum auch immer hat es nicht so funktioniert, wie es soll, ich verstehe es nicht, aber die Zeit ist ziemolich um,
 Deswegen habe ich schon Mal abgegeben und werde es bis Mittwoch noch Mal probieren*/
