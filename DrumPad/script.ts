@@ -10,59 +10,54 @@ const soundl2:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/la
 
 let song: any [] = [];
 
+function playsound (temp){
+    temp.play();
+    song.push(temp);
+}
 
 document.querySelector('#h').addEventListener('click', function() {
-    soundh.play();
-    song.push(soundh);
+    playsound(soundh);
 }
 )
 
 document.querySelector('#k').addEventListener('click', function() {
-    soundk.play();
-    song.push(soundk);
+    playsound(soundk);
 }
 )
 
 document.querySelector('#s').addEventListener('click', function() {
-    sounds.play();
-    song.push(sounds);
+    playsound(sounds);
 }
 ) 
 
 document.querySelector('#a').addEventListener('click', function() {
-    sounda.play();
-    song.push(sounda);
+    playsound(sounda);
 }
 )
 
 document.querySelector('#c').addEventListener('click', function() {
-    soundc.play();
-    song.push(soundc);
+    playsound(soundc);
 }
 )
 
 document.querySelector('#f').addEventListener('click', function() {
-    soundf.play();
-    song.push(soundf);
+    playsound(soundf);
 }
 )
 
 document.querySelector('#g').addEventListener('click', function() {
-    soundg.play();
-    song.push(soundg);
+    playsound(soundg);
 }
 )
 
 
 document.querySelector('#l1').addEventListener('click', function() {
-    soundl1.play();
-    song.push(soundl1);
+    playsound(soundl1);
 }
 )
 
 document.querySelector('#l2').addEventListener('click', function() {
-    soundl2.play();
-    song.push(soundl2);
+    playsound(soundl2);
 }
 )
 
@@ -72,7 +67,10 @@ let counter = 0;
 document.querySelector('#image').addEventListener('click', function() {
     setInterval(function() {
         song[counter].play();
-        counter++
-    }, 700);
+        if (counter >= song.length - 1){
+            counter = 0
+        } else counter++
+    }, 1000);
 }
 )
+
