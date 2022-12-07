@@ -1,12 +1,12 @@
-const soundh = new Audio('/L08/task_material/assets/DrumPad/hihat.mp3');
-const soundk = new Audio('/L08/task_material/assets/DrumPad/kick.mp3');
-const sounds = new Audio('/L08/task_material/assets/DrumPad/snare.mp3');
-const sounda = new Audio('/L08/task_material/assets/DrumPad/A.mp3');
-const soundc = new Audio('/L08/task_material/assets/DrumPad/C.mp3');
-const soundf = new Audio('/L08/task_material/assets/DrumPad/F.mp3');
-const soundg = new Audio('/L08/task_material/assets/DrumPad/G.mp3');
-const soundl1 = new Audio('/L08/task_material/assets/DrumPad/laugh-1.mp3');
-const soundl2 = new Audio('/L08/task_material/assets/DrumPad/laugh-2.mp3');
+const soundh = new Audio('./task_material/assets/DrumPad/hihat.mp3');
+const soundk = new Audio('./task_material/assets/DrumPad/kick.mp3');
+const sounds = new Audio('./task_material/assets/DrumPad/snare.mp3');
+const sounda = new Audio('./task_material/assets/DrumPad/A.mp3');
+const soundc = new Audio('./task_material/assets/DrumPad/C.mp3');
+const soundf = new Audio('./task_material/assets/DrumPad/F.mp3');
+const soundg = new Audio('./task_material/assets/DrumPad/G.mp3');
+const soundl1 = new Audio('./task_material/assets/DrumPad/laugh-1.mp3');
+const soundl2 = new Audio('./task_material/assets/DrumPad/laugh-2.mp3');
 let song = [];
 function playsound(temp) {
     temp.play();

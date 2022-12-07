@@ -1,12 +1,12 @@
-const soundh:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/hihat.mp3');
-const soundk:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/kick.mp3');
-const sounds:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/snare.mp3');
-const sounda:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/A.mp3');
-const soundc:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/C.mp3');
-const soundf:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/F.mp3');
-const soundg:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/G.mp3');
-const soundl1:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/laugh-1.mp3');
-const soundl2:HTMLAudioElement = new Audio('/L08/task_material/assets/DrumPad/laugh-2.mp3');
+const soundh:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/hihat.mp3');
+const soundk:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/kick.mp3');
+const sounds:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/snare.mp3');
+const sounda:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/A.mp3');
+const soundc:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/C.mp3');
+const soundf:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/F.mp3');
+const soundg:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/G.mp3');
+const soundl1:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh-1.mp3');
+const soundl2:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh-2.mp3');
 
 let song: any [] = [];
 
