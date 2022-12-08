@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+}
+button{
+    height: 150px;
+    width: 150px;
+    border-radius: 4px;
+    border-style: hidden;
+}
+
+#h {
+    background-color: rgb(55, 0, 255);
+}
+
+#k {
+    
+    background-color: rgb(55, 0, 255);
+}
+#s {
+    background-color: rgb(55, 0, 255);
+}
+
+#a {
+    background-color: rgb(255, 0, 255);
+}
+
+#c {
+    background-color: rgb(255, 0, 255);
+}
+
+#f {
+    background-color: rgb(255, 0, 255);
+}
+
+#g {
+    background-color: rgb(255, 0, 255);
+}
+
+#l1 {
+    background-color: rgb(255, 94, 0);
+}
+
+#l2 {
+    background-color: rgb(255, 94, 0);
+}
+
+#oben{
+    width: 460px;
+    margin: 2.5px;
+}
+#mitte{
+    width: 460px;
+    margin: 2.5px;
+}
+#unten{
+    width: 460px;
+    margin: 2.5px;
+}
+
+#gesamt{
+    margin-top: 30px;
+    width: 460px;
+    height: 460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-wrapper{
+    width: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30px;
+}
+

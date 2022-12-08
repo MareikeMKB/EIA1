@@ -1,4 +1,4 @@
-/* const soundh:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/hihat.mp3');
+const soundh:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/hihat.mp3');
 const soundk:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/kick.mp3');
 const sounds:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/snare.mp3');
 const sounda:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/A.mp3');
@@ -8,11 +8,22 @@ const soundg:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/G.mp3'
 const soundl1:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh-1.mp3');
 const soundl2:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh-2.mp3');
 
-let song: any [] = [];
+let song: any [] = [sounds, soundh, sounds, soundk];
+let a = 0;
 
 function playsound (temp){
     temp.play();
-    song.push(temp);
+    if (a == 1) {
+        song.push(temp);
+    }
+    
+}
+
+function record(){
+    song = [];
+    if (a == 0){
+        a = 1;
+    } else a = 0;
 }
 
 document.querySelector('#h').addEventListener('click', function() {
@@ -64,9 +75,9 @@ document.querySelector('#l2').addEventListener('click', function() {
 
 let counter = 0;
 
-document.querySelector('#image').addEventListener('click', function() {
+document.querySelector('#play').addEventListener('click', function() {
     setInterval(function() {
-        song[counter].play();
+        playsound(song[counter]);
         if (counter >= song.length - 1){
             counter = 0
         } else counter++
@@ -74,4 +85,16 @@ document.querySelector('#image').addEventListener('click', function() {
 }
 )
 
-*/
+function randint (){
+    let temp = Math.random();
+    temp = temp*10;
+    temp = Math.round(temp);
+    return temp
+}
+function remix() {
+    let int = randint();
+    let count = randint();
+    while (count > 0){
+        
+    }
+}
