@@ -8,6 +8,7 @@ const soundg = new Audio('./task_material/assets/DrumPad/G.mp3');
 const soundl1 = new Audio('./task_material/assets/DrumPad/laugh-1.mp3');
 const soundl2 = new Audio('./task_material/assets/DrumPad/laugh-2.mp3');
 let song = [sounds, soundh, sounds, soundk];
+const sound = [soundh, soundk, sounds, sounda, soundc, soundf, soundg, soundl1, soundl2];
 let a = 0;
 function playsound(temp) {
     temp.play();
@@ -68,9 +69,18 @@ function randint() {
     return temp;
 }
 function remix() {
+    song = [];
     let int = randint();
+    while (int > sound.length) {
+        int = randint();
+    }
     let count = randint();
     while (count > 0) {
+        song.push(sound[int]);
+        count--;
+        while (int > sound.length) {
+            int = randint();
+        }
     }
 }
 //# sourceMappingURL=script.js.map

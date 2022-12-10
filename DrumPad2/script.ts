@@ -9,6 +9,7 @@ const soundl1:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh
 const soundl2:HTMLAudioElement = new Audio('./task_material/assets/DrumPad/laugh-2.mp3');
 
 let song: any [] = [sounds, soundh, sounds, soundk];
+const sound: any [] = [soundh, soundk, sounds, sounda, soundc, soundf, soundg, soundl1, soundl2]
 let a = 0;
 
 function playsound (temp){
@@ -92,9 +93,17 @@ function randint (){
     return temp
 }
 function remix() {
+    song = []
     let int = randint();
+    while (int > sound.length) {
+        int = randint();
+    }
     let count = randint();
     while (count > 0){
-        
+        song.push(sound[int]);
+        count --;
+        while (int > sound.length) {
+            int = randint();
+        }
     }
 }
