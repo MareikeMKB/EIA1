@@ -20,12 +20,6 @@ function playsound (temp){
     
 }
 
-function record(){
-    song = [];
-    if (a == 0){
-        a = 1;
-    } else a = 0;
-}
 
 document.querySelector('#h').addEventListener('click', function() {
     playsound(soundh);
@@ -73,11 +67,23 @@ document.querySelector('#l2').addEventListener('click', function() {
 }
 )
 
+function randint (){
+    let temp = Math.random();
+    temp = temp*10;
+    temp = Math.round(temp);
+    return temp
+}
 
+let playy = document.querySelector('#play');
+let stopp = document.querySelector('#stop');
+
+let intvar
 let counter = 0;
 
 document.querySelector('#play').addEventListener('click', function() {
-    setInterval(function() {
+    playy.classList.add('hidden');
+    stopp.classList.remove('hidden')
+    intvar = setInterval(function() {
         playsound(song[counter]);
         if (counter >= song.length - 1){
             counter = 0
@@ -86,13 +92,8 @@ document.querySelector('#play').addEventListener('click', function() {
 }
 )
 
-function randint (){
-    let temp = Math.random();
-    temp = temp*10;
-    temp = Math.round(temp);
-    return temp
-}
-function remix() {
+
+document.querySelector('#remix').addEventListener('click', function() {
     song = []
     let int = randint();
     while (int > sound.length) {
@@ -101,9 +102,23 @@ function remix() {
     let count = randint();
     while (count > 0){
         song.push(sound[int]);
-        count --;
+        count = count -1;
         while (int > sound.length) {
             int = randint();
         }
     }
-}
+})
+
+
+document.querySelector('#stop').addEventListener('click', function(){
+    stopp.classList.add('hidden');
+    playy.classList.remove('hidden');
+    clearInterval(intvar);
+})
+
+document.querySelector('#record').addEventListener('click', function() {
+    song = [];
+    if (a == 0){
+        a = 1;
+    } else a = 0;
+})

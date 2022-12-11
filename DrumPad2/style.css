@@ -65,10 +65,29 @@ button{
     margin-right: auto;
 }
 
-.image-wrapper{
-    width: 100px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:30px;
+.interact{
+    text-align: center;
+    color:white;
+    position:absolute;
+    font-size: 60px;
+    padding: 30px;
+    margin-left:50%;
+    margin-right:50%;
 }
 
+#play:hover {
+    color:cyan;
+}
+#stop:hover {
+    color:cyan;
+}
+#record:hover {
+    color:cyan;
+}
+#remix:hover {
+    color:cyan;
+}
+
+.hidden{
+    display:none !important;
+}
