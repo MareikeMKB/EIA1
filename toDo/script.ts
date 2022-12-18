@@ -64,6 +64,9 @@ document.querySelector('button').addEventListener('click', function(){
     document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + list.length;
 })
 
+document.querySelector('#add').addEventListener('click', function() {
+    addTask();
+})
 
 
 /* Ich weiß nicht, wie ich spezifische Dinge selecten kann - wüsste ich das, würde die Löschen-Funktion funktionieren 
