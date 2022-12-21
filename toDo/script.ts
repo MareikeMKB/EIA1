@@ -1,10 +1,11 @@
-let list = []
+
 
 interface Task {
     name: string;
 }
 
-let Inputvalue:string = (<HTMLInputElement>document.getElementById('Input')).value;
+let Inputvalue
+let count = 0;
 
 function addTask() {
     if (Inputvalue != "") {
@@ -13,15 +14,15 @@ function addTask() {
     let t: Task = {
         name: Inputvalue
     };
-    list.push(t);
     showTask(t, 'aufgabe');
-    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + list.length;
+    count ++;
+    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
 };
 
 function showTask(task: Task, i) {
     let div = document.createElement('div');
-    document.body.appendChild(div);
     div.setAttribute("class",i);
+    document.body.appendChild(div);
     let box = document.createElement('input');
     box.setAttribute('type','checkbox');
     div.appendChild(box);
@@ -31,38 +32,49 @@ function showTask(task: Task, i) {
     let button = document.createElement('button');
     div.appendChild(button);
     button.innerHTML = 'X';
-    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + list.length;
+    button.addEventListener('click', function(){
+        this.parentNode.parentNode.removeChild(this.parentNode)
+        count = count-1
+        document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
+    })
+    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
 }
 
-function removeTask(task: Task) {
-    let o = list.indexOf(task);
-    list.splice(o, 1);
-    /* Befehl, um HTML-Code zu löschen einfügen*/
-    for (let i = 0; i < list.length; i++){
-        showTask(list[i], "aufgabe");
-    }
+/* function showTask(task: Task, i) {
+    /*let div = document.createElement('div');
+    document.getElementById('#sachen').appendChild(div);
+    div.setAttribute("class",i);
+    let box = document.createElement('input');
+    box.setAttribute('type','checkbox');
+    document.getElementById('#sachen').appendChild(box);
+    let aufgabe = document.createElement('p');
+    document.getElementById('#sachen').appendChild(aufgabe);
+    aufgabe.innerHTML = task.name;
+    let button = document.createElement('button');
+    document.getElementById('#sachen').appendChild(button);
+    button.innerHTML = 'X';
+    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
 }
-
+*/
 
 
 /* Test */
+count = 2
 let test: Task= {
-    name: "Test"
+    name: "Platzhalter1"
 }
 let test2: Task= {
-    name: "Test2"
-}
-list.push(test);
-list.push(test2);
+    name: "Platzhalter2"
+} 
+
+
+showTask(test, 'aufgabe');
+showTask(test2, 'aufgabe');
 
 
 
 
 
-document.querySelector('button').addEventListener('click', function(){
-    removeTask(test);
-    document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + list.length;
-})
 
 document.querySelector('#add').addEventListener('click', function() {
     addTask();
