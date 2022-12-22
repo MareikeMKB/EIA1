@@ -1,5 +1,5 @@
 
-/*
+
 interface Task {
     name: string;
 }
@@ -38,11 +38,13 @@ function showTask(task: Task, i) {
         document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
     })
     document.querySelector('h2').innerHTML = "Anzahl der Aufgaben: " + count;
+    /* Mach Liste mit allen divs wieder rein, weil mit insertBefore(wasManEinfügenWill,vorWasManEinfügt) auf divs spezifisch zugegriffen werden kann und dann sollte das mit vorher einfügen theoretisch klappen
+    Wenn nicht, dann https://developer.mozilla.org/en-US/docs/Web/API/Element/before probieren
+    InsertBefore hat bei Judith geklappt mit wrapper um alle divs*/
 }
 
 
-
-/* Test 
+/* Test */
 count = 2
 let test: Task= {
     name: "Platzhalter1"
@@ -65,4 +67,3 @@ document.querySelector('#add').addEventListener('click', function() {
 })
 
 
-*/
