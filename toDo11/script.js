@@ -15,7 +15,10 @@ function addTask() {
 function showTask(task, i) {
     let div = document.createElement('div');
     div.setAttribute("class", i);
-    document.body.appendChild(div);
+    document.getElementById('sachen').appendChild(div);
+    var sp2 = document.getElementById('sachen');
+    var parentDiv = sp2.firstChild;
+    sp2.insertBefore(div, parentDiv);
     let box = document.createElement('input');
     box.setAttribute('type', 'checkbox');
     div.appendChild(box);
